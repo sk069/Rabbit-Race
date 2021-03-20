@@ -35,9 +35,9 @@ namespace Rabbit_Race
             RabbitImage.Left = positionToStart;
         }
 
-        //internal void MoveRabbitToStart()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        internal void MoveRabbitToStart()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

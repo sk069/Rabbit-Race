@@ -7,18 +7,18 @@ using System.Windows.Forms;
 
 namespace Rabbit_Race
 {
-     public class Bettor :Bet
+     public class Bettor : Bet
     {
         public string title { get; set; }
         public int PocketCash { get; set; }
         public Bet ExistingBet;
 
-        public RadioButton selectedGambler { get; set; }
+        public RadioButton selectedBetter { get; set; }
         public Label activityIndicator { get; set; }
 
         public void ActivityLabelUpdator()
         {
-            selectedGambler.Text = title + " has $" + PocketCash;
+            selectedBetter.Text = title + " has $" + PocketCash;
         }
 
         public void ResetBettingHistory()
@@ -33,7 +33,7 @@ namespace Rabbit_Race
 
             if (Amount <= PocketCash)
             {
-                activityIndicator.Text = this.title + " has placed $" + Amount + " on Athlete #" + BidPlayer;
+                activityIndicator.Text = this.title + " has placed $" + Amount + " on Player #" + BidPlayer;
                 this.ActivityLabelUpdator();
                 return true;
             }
@@ -45,11 +45,11 @@ namespace Rabbit_Race
             }
         }
 
-        public void CollectWinnings(int WinningGambler)
+        public void CollectWinnings(int WinningBetter)
         {
             if (this.ExistingBet != null)
             {
-                PocketCash += ExistingBet.CashOut(WinningGambler);
+                PocketCash += ExistingBet.CashOut(WinningBetter);
                 ResetBettingHistory();
                 ActivityLabelUpdator();
             }

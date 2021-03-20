@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rabbit_Race
 {
-    public class Bet
+    public class Bet : Rabbit
     {
         public int betBalance { get; set; }
         public Bettor betPlacer { get; set; }

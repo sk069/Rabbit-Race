@@ -52,12 +52,14 @@ namespace Rabbit_Race
             this.Rabbit2 = new System.Windows.Forms.PictureBox();
             this.Rabbit3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Rabbit4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rabbit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rabbit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rabbit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rabbit4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -227,7 +229,7 @@ namespace Rabbit_Race
             // Rabbit1
             // 
             this.Rabbit1.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit1.Location = new System.Drawing.Point(320, 50);
+            this.Rabbit1.Location = new System.Drawing.Point(320, 26);
             this.Rabbit1.Name = "Rabbit1";
             this.Rabbit1.Size = new System.Drawing.Size(100, 73);
             this.Rabbit1.TabIndex = 16;
@@ -236,7 +238,7 @@ namespace Rabbit_Race
             // Rabbit2
             // 
             this.Rabbit2.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit2.Location = new System.Drawing.Point(320, 195);
+            this.Rabbit2.Location = new System.Drawing.Point(320, 130);
             this.Rabbit2.Name = "Rabbit2";
             this.Rabbit2.Size = new System.Drawing.Size(100, 71);
             this.Rabbit2.TabIndex = 17;
@@ -245,7 +247,7 @@ namespace Rabbit_Race
             // Rabbit3
             // 
             this.Rabbit3.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit3.Location = new System.Drawing.Point(320, 330);
+            this.Rabbit3.Location = new System.Drawing.Point(320, 225);
             this.Rabbit3.Name = "Rabbit3";
             this.Rabbit3.Size = new System.Drawing.Size(100, 77);
             this.Rabbit3.TabIndex = 18;
@@ -255,11 +257,21 @@ namespace Rabbit_Race
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // Rabbit4
+            // 
+            this.Rabbit4.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
+            this.Rabbit4.Location = new System.Drawing.Point(320, 330);
+            this.Rabbit4.Name = "Rabbit4";
+            this.Rabbit4.Size = new System.Drawing.Size(100, 72);
+            this.Rabbit4.TabIndex = 19;
+            this.Rabbit4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 499);
+            this.Controls.Add(this.Rabbit4);
             this.Controls.Add(this.Rabbit3);
             this.Controls.Add(this.Rabbit2);
             this.Controls.Add(this.Rabbit1);
@@ -287,39 +299,13 @@ namespace Rabbit_Race
             ((System.ComponentModel.ISupportInitialize)(this.Rabbit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rabbit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rabbit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Rabbit4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            button2.Enabled = true;
-
-           
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            Variable.CurrentGambler = 2;
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            Variable.CurrentGambler = 1;
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            Variable.CurrentGambler = 0;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Variable.RabbitGambler[Variable.CurrentGambler].Betting((int)numericUpDown1.Value, (int)numericUpDown2.Value);
-            Variable.RabbitGambler[Variable.CurrentGambler].ActivityLabelUpdator();
-        }
+      
 
         #endregion
 
@@ -343,7 +329,7 @@ namespace Rabbit_Race
         private System.Windows.Forms.PictureBox Rabbit2;
         private System.Windows.Forms.PictureBox Rabbit3;
         private System.Windows.Forms.Timer timer1;
-       
+        private System.Windows.Forms.PictureBox Rabbit4;
     }
 }
 
