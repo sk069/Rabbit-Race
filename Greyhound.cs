@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Rabbit_Race
 {
-    public class Rabbit
+    public class Greyhound
     {
         public int positionToStart { get; set; }
         public int positionToFinish { get; set; }

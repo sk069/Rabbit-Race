@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Rabbit_Race
 {
-     public class Bettor : Bet
+     public class Punter : Bet
     {
         public string title { get; set; }
         public int PocketCash { get; set; }

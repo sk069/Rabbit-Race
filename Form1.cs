@@ -18,34 +18,35 @@ namespace Rabbit_Race
             int StartRace = Joe.Left;
             int RaceTrackLength = pictureBox1.Width - Rabbit1.Right;
 
-            Variable.Rabbit[0] = new Rabbit() { RabbitImage = Rabbit1, positionToFinish = RaceTrackLength, positionToStart = StartRace };
-            Variable.Rabbit[1] = new Rabbit() { RabbitImage = Rabbit2, positionToFinish = RaceTrackLength, positionToStart = StartRace };
-            Variable.Rabbit[2] = new Rabbit() { RabbitImage = Rabbit3, positionToFinish = RaceTrackLength, positionToStart = StartRace };
-            Variable.Rabbit[3] = new Rabbit() { RabbitImage = Rabbit4, positionToFinish = RaceTrackLength, positionToStart = StartRace };
+            Factory.Rabbit[0] = new Greyhound() { RabbitImage = Rabbit1, positionToFinish = RaceTrackLength, positionToStart = StartRace };
+            Factory.Rabbit[1] = new Greyhound() { RabbitImage = Rabbit2, positionToFinish = RaceTrackLength, positionToStart = StartRace };
+            Factory.Rabbit[2] = new Greyhound() { RabbitImage = Rabbit3, positionToFinish = RaceTrackLength, positionToStart = StartRace };
+            Factory.Rabbit[3] = new Greyhound() { RabbitImage = Rabbit4, positionToFinish = RaceTrackLength, positionToStart = StartRace };
 
 
-            Variable.RabbitBetter[0] = new Bettor() { PocketCash = 65, activityIndicator = Joe, selectedBetter = radioButton1, title = "Player 1" };
-            Variable.RabbitBetter[1] = new Bettor() { PocketCash = 75, activityIndicator = Bob, selectedBetter = radioButton2, title = "Player 2" };
-            Variable.RabbitBetter[2] = new Bettor() { PocketCash = 55, activityIndicator = Al, selectedBetter = radioButton3, title = "Player 3" };
+            Factory.RabbitBetter[0] = new Punter() { PocketCash = 50, activityIndicator = Joe, selectedBetter = radioButton1, title = "Player 1" };
+            Factory.RabbitBetter[1] = new Punter() { PocketCash = 50, activityIndicator = Bob, selectedBetter = radioButton2, title = "Player 2" };
+            Factory.RabbitBetter[2] = new Punter() { PocketCash = 50, activityIndicator = Al, selectedBetter = radioButton3, title = "Player 3" };
 
             // Sets the default values to the labels
-            Variable.RabbitBetter[0].ActivityLabelUpdator();
-            Variable.RabbitBetter[1].ActivityLabelUpdator();
-            Variable.RabbitBetter[2].ActivityLabelUpdator();
-            Variable.RabbitBetter[0].ResetBettingHistory();
-            Variable.RabbitBetter[1].ResetBettingHistory();
-            Variable.RabbitBetter[2].ResetBettingHistory();
+            Factory.RabbitBetter[0].ActivityLabelUpdator();
+            Factory.RabbitBetter[1].ActivityLabelUpdator();
+            Factory.RabbitBetter[2].ActivityLabelUpdator();
+            Factory.RabbitBetter[0].ResetBettingHistory();
+            Factory.RabbitBetter[1].ResetBettingHistory();
+            Factory.RabbitBetter[2].ResetBettingHistory();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Variable.RabbitBetter[Variable.CurrentBetter].Betting((int)numericUpDown1.Value, (int)numericUpDown2.Value);
-            Variable.RabbitBetter[Variable.CurrentBetter].ActivityLabelUpdator();
+
+            Factory.RabbitBetter[Factory.CurrentBetter].Betting((int)numericUpDown1.Value, (int)numericUpDown2.Value);
+            Factory.RabbitBetter[Factory.CurrentBetter].ActivityLabelUpdator();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
             button2.Enabled = true;
 
 
@@ -57,10 +58,10 @@ namespace Rabbit_Race
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < Variable.Rabbit.Length; i++)
+            for (int i = 0; i < Factory.Rabbit.Length; i++)
             {
-                Variable.Rabbit[Variable.randomSpeed.Next(0, 4)].Fly();
-                if (Variable.Rabbit[i].Fly())
+                Factory.Rabbit[Factory.randomSpeed.Next(0, 4)].Fly();
+                if (Factory.Rabbit[i].Fly())
                 {
                     timer1.Stop();
                     timer1.Enabled = false;
@@ -72,27 +73,27 @@ namespace Rabbit_Race
 
         private void MoveRabbits()
         {
-            Variable.Rabbit[0].MoveRabbitsToStart();
-            Variable.Rabbit[1].MoveRabbitsToStart();
-            Variable.Rabbit[2].MoveRabbitsToStart();
-            Variable.Rabbit[3].MoveRabbitsToStart();
+            Factory.Rabbit[0].MoveRabbitsToStart();
+            Factory.Rabbit[1].MoveRabbitsToStart();
+            Factory.Rabbit[2].MoveRabbitsToStart();
+            Factory.Rabbit[3].MoveRabbitsToStart();
 
         }
 
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            Variable.CurrentBetter = 0;
+            Factory.CurrentBetter = 0;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            Variable.CurrentBetter = 1;
+            Factory.CurrentBetter = 1;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            Variable.CurrentBetter = 2;
+            Factory.CurrentBetter = 2;
         }
 
   
@@ -107,10 +108,10 @@ namespace Rabbit_Race
             private void DeclarTheWinner(int Winner)
             {
                 MessageBox.Show("Rabbit #" + Winner + " is the Winning Rabbit");
-                for (int i = 0; i < Variable.RabbitBetter.Length; i++)
+                for (int i = 0; i < Factory.RabbitBetter.Length; i++)
                 {
-                    Variable.RabbitBetter[i].CollectWinnings(Winner);
-                    Variable.RabbitBetter[i].ActivityLabelUpdator();
+                    Factory.RabbitBetter[i].CollectWinnings(Winner);
+                    Factory.RabbitBetter[i].ActivityLabelUpdator();
                     MoveRabbits();
                     ResetBids();
                 }

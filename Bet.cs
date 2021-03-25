@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Rabbit_Race
 {
-    public class Bet : Rabbit
+    public class Bet : Greyhound
     {
         public int betBalance { get; set; }
-        public Bettor betPlacer { get; set; }
+        public Punter betPlacer { get; set; }
         public int betRabbit { get; set; }
 
         public int CashOut(int Winner)

@@ -101,7 +101,7 @@ namespace Rabbit_Race
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Joe";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.button1_Click);
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -114,7 +114,7 @@ namespace Rabbit_Race
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Bob";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.button2_Click);
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -127,7 +127,7 @@ namespace Rabbit_Race
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Al";
             this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.button3_Click);
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // label3
             // 
@@ -159,6 +159,11 @@ namespace Rabbit_Race
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(126, 263);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 9;
