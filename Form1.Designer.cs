@@ -64,9 +64,9 @@ namespace Rabbit_Race
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(299, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, -18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(669, 420);
+            this.pictureBox1.Size = new System.Drawing.Size(669, 413);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -74,7 +74,7 @@ namespace Rabbit_Race
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(59, 12);
+            this.label1.Location = new System.Drawing.Point(743, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 31);
             this.label1.TabIndex = 1;
@@ -84,7 +84,7 @@ namespace Rabbit_Race
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 50);
+            this.label2.Location = new System.Drawing.Point(687, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 25);
             this.label2.TabIndex = 2;
@@ -94,7 +94,7 @@ namespace Rabbit_Race
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(17, 103);
+            this.radioButton1.Location = new System.Drawing.Point(692, 100);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(52, 20);
             this.radioButton1.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace Rabbit_Race
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(17, 140);
+            this.radioButton2.Location = new System.Drawing.Point(692, 137);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(54, 20);
             this.radioButton2.TabIndex = 4;
@@ -120,7 +120,7 @@ namespace Rabbit_Race
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(17, 181);
+            this.radioButton3.Location = new System.Drawing.Point(692, 172);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(40, 20);
             this.radioButton3.TabIndex = 5;
@@ -133,7 +133,7 @@ namespace Rabbit_Race
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 225);
+            this.label3.Location = new System.Drawing.Point(687, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 6;
@@ -143,7 +143,7 @@ namespace Rabbit_Race
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 263);
+            this.label4.Location = new System.Drawing.Point(689, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 16);
             this.label4.TabIndex = 7;
@@ -151,14 +151,14 @@ namespace Rabbit_Race
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(126, 225);
+            this.numericUpDown1.Location = new System.Drawing.Point(808, 225);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 8;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(126, 263);
+            this.numericUpDown2.Location = new System.Drawing.Point(820, 272);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             4,
             0,
@@ -171,7 +171,7 @@ namespace Rabbit_Race
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(377, 450);
+            this.button1.Location = new System.Drawing.Point(21, 450);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 37);
             this.button1.TabIndex = 10;
@@ -182,7 +182,7 @@ namespace Rabbit_Race
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(540, 450);
+            this.button2.Location = new System.Drawing.Point(188, 453);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(147, 37);
             this.button2.TabIndex = 11;
@@ -193,7 +193,7 @@ namespace Rabbit_Race
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(746, 451);
+            this.button3.Location = new System.Drawing.Point(395, 454);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 36);
             this.button3.TabIndex = 12;
@@ -205,7 +205,7 @@ namespace Rabbit_Race
             // 
             this.Joe.AutoSize = true;
             this.Joe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Joe.Location = new System.Drawing.Point(22, 330);
+            this.Joe.Location = new System.Drawing.Point(689, 340);
             this.Joe.Name = "Joe";
             this.Joe.Size = new System.Drawing.Size(166, 16);
             this.Joe.TabIndex = 13;
@@ -215,7 +215,7 @@ namespace Rabbit_Race
             // 
             this.Bob.AutoSize = true;
             this.Bob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bob.Location = new System.Drawing.Point(22, 378);
+            this.Bob.Location = new System.Drawing.Point(689, 379);
             this.Bob.Name = "Bob";
             this.Bob.Size = new System.Drawing.Size(168, 16);
             this.Bob.TabIndex = 14;
@@ -225,7 +225,7 @@ namespace Rabbit_Race
             // 
             this.Al.AutoSize = true;
             this.Al.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Al.Location = new System.Drawing.Point(22, 429);
+            this.Al.Location = new System.Drawing.Point(689, 415);
             this.Al.Name = "Al";
             this.Al.Size = new System.Drawing.Size(154, 16);
             this.Al.TabIndex = 15;
@@ -234,7 +234,7 @@ namespace Rabbit_Race
             // Rabbit1
             // 
             this.Rabbit1.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit1.Location = new System.Drawing.Point(320, 26);
+            this.Rabbit1.Location = new System.Drawing.Point(21, 31);
             this.Rabbit1.Name = "Rabbit1";
             this.Rabbit1.Size = new System.Drawing.Size(100, 73);
             this.Rabbit1.TabIndex = 16;
@@ -243,7 +243,7 @@ namespace Rabbit_Race
             // Rabbit2
             // 
             this.Rabbit2.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit2.Location = new System.Drawing.Point(320, 130);
+            this.Rabbit2.Location = new System.Drawing.Point(21, 121);
             this.Rabbit2.Name = "Rabbit2";
             this.Rabbit2.Size = new System.Drawing.Size(100, 71);
             this.Rabbit2.TabIndex = 17;
@@ -252,7 +252,7 @@ namespace Rabbit_Race
             // Rabbit3
             // 
             this.Rabbit3.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit3.Location = new System.Drawing.Point(320, 225);
+            this.Rabbit3.Location = new System.Drawing.Point(21, 211);
             this.Rabbit3.Name = "Rabbit3";
             this.Rabbit3.Size = new System.Drawing.Size(100, 77);
             this.Rabbit3.TabIndex = 18;
@@ -265,7 +265,7 @@ namespace Rabbit_Race
             // Rabbit4
             // 
             this.Rabbit4.Image = global::Rabbit_Race.Properties.Resources.Rabbit;
-            this.Rabbit4.Location = new System.Drawing.Point(320, 330);
+            this.Rabbit4.Location = new System.Drawing.Point(21, 304);
             this.Rabbit4.Name = "Rabbit4";
             this.Rabbit4.Size = new System.Drawing.Size(100, 72);
             this.Rabbit4.TabIndex = 19;

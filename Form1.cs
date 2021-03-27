@@ -28,7 +28,7 @@ namespace Rabbit_Race
             Factory.RabbitBetter[1] = new Punter() { PocketCash = 50, activityIndicator = Bob, selectedBetter = radioButton2, title = "Player 2" };
             Factory.RabbitBetter[2] = new Punter() { PocketCash = 50, activityIndicator = Al, selectedBetter = radioButton3, title = "Player 3" };
 
-            // Sets the default values to the labels
+            //  the code is Sets the default values to the labels
             Factory.RabbitBetter[0].ActivityLabelUpdator();
             Factory.RabbitBetter[1].ActivityLabelUpdator();
             Factory.RabbitBetter[2].ActivityLabelUpdator();
@@ -36,7 +36,7 @@ namespace Rabbit_Race
             Factory.RabbitBetter[1].ResetBettingHistory();
             Factory.RabbitBetter[2].ResetBettingHistory();
         }
-
+        //Place bet button code
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -44,10 +44,11 @@ namespace Rabbit_Race
             Factory.RabbitBetter[Factory.CurrentBetter].ActivityLabelUpdator();
         }
 
+        //Start race button code
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            button2.Enabled = true;
+            timer1.Enabled = true;
+            button2.Enabled = false;
 
 
         }
@@ -55,13 +56,13 @@ namespace Rabbit_Race
         {
             Environment.Exit(0);
         }
-
+         // code to call the start race button//
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             for (int i = 0; i < Factory.Rabbit.Length; i++)
             {
-                Factory.Rabbit[Factory.randomSpeed.Next(0, 4)].Fly();
-                if (Factory.Rabbit[i].Fly())
+                Factory.Rabbit[Factory.randomSpeed.Next(0, 4)].Run();
+                if (Factory.Rabbit[i].Run())
                 {
                     timer1.Stop();
                     timer1.Enabled = false;
@@ -97,7 +98,7 @@ namespace Rabbit_Race
         }
 
   
-
+        //Code for reset bids
             private void ResetBids()
             {
                 Joe.Text = "Player 1 hasn't placed a bet.";
@@ -105,6 +106,7 @@ namespace Rabbit_Race
                 Al.Text = "Player 3 hasn't placed a bet.";
             }
 
+        //code for declair winner in race
             private void DeclarTheWinner(int Winner)
             {
                 MessageBox.Show("Rabbit #" + Winner + " is the Winning Rabbit");

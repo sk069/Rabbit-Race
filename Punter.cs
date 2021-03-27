@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace Rabbit_Race
 {
+    //This is a abstract class which has code for placing bet//
      public class Punter : Bet
     {
         public string title { get; set; }

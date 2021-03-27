@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Rabbit_Race
 {
+    //This is a class which has fields of images, race start position and track lenght//
     public class Greyhound
     {
         public int positionToStart { get; set; }
@@ -15,7 +16,7 @@ namespace Rabbit_Race
         public PictureBox RabbitImage { get; set; }
         private Random randomSpeed = new Random();
 
-        public bool Fly()
+        public bool Run()
         {
             Point CurrentCoordinates = RabbitImage.Location;
             CurrentCoordinates.X += randomSpeed.Next(1, 6);
